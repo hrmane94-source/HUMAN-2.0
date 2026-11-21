@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a1008"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </radialGradient>
+    <radialGradient id="skinGrad" cx="40%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#c8a882"/>
+      <stop offset="60%" stop-color="#8b6440"/>
+      <stop offset="100%" stop-color="#3d2910"/>
+    </radialGradient>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E63936" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#E63936" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E63936" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="metalGrad" cx="30%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#d4d0c8"/>
+      <stop offset="40%" stop-color="#8a8880"/>
+      <stop offset="100%" stop-color="#1c1c1c"/>
+    </radialGradient>
+    <radialGradient id="metalGrad2" cx="60%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#b8b4aa"/>
+      <stop offset="50%" stop-color="#5a5850"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </radialGradient>
+    <linearGradient id="shoulderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="40%" stop-color="#4a4a4a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="splitLine" x1="400" y1="0" x2="400" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E63936" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#E63936" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#E63936" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#E63936" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="eyeFilter">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="metalSheen">
+      <feGaussianBlur stdDeviation="0.5"/>
+    </filter>
+    <clipPath id="faceClip">
+      <ellipse cx="400" cy="340" rx="210" ry="250"/>
+    </clipPath>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="400" height="1000"/>
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="400" y="0" width="400" height="1000"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1000" fill="url(#bgGrad)"/>
+
+  <!-- Dramatic rim light from left -->
+  <ellipse cx="-20" cy="380" rx="180" ry="350" fill="#6b4e2a" opacity="0.12"/>
+
+  <!-- Subtle top light -->
+  <ellipse cx="400" cy="0" rx="300" ry="150" fill="#ffffff" opacity="0.03"/>
+
+  <!-- BODY / NECK / SHOULDER BASE -->
+  <!-- Full body silhouette -->
+  <path d="M160 720 Q180 650 220 620 Q280 590 340 580 L380 575 L400 575 L420 575 L460 580 Q520 590 580 620 Q620 650 640 720 L660 820 L700 1000 L100 1000 Z" fill="#0e0e0e"/>
+
+  <!-- Left shoulder (human side) - warm, organic -->
+  <path d="M160 720 Q180 650 230 620 Q280 595 340 582 L380 578 L380 1000 L100 1000 Z" fill="#1a1208" opacity="0.95"/>
+  <path d="M160 720 Q185 660 235 625 Q282 598 340 584 L378 580" stroke="#3d2910" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Right shoulder (cybernetic side) - structured, mechanical -->
+  <path d="M640 720 Q620 650 575 622 Q525 595 468 582 L420 578 L420 1000 L700 1000 Z" fill="#101010" opacity="0.98"/>
+
+  <!-- Mechanical shoulder armor plates - right side -->
+  <path d="M580 650 Q620 640 650 680 L660 740 Q630 720 590 720 Q555 720 535 700 Z" fill="#252525"/>
+  <path d="M580 650 Q620 640 650 680 L660 740 Q630 720 590 720 Q555 720 535 700 Z" fill="url(#metalGrad2)" opacity="0.7"/>
+  <path d="M582 652 Q620 643 648 682 L656 738 Q628 718 589 718 Q556 718 536 699" stroke="#888480" stroke-width="0.5" fill="none" opacity="0.6"/>
+
+  <!-- Shoulder bolt details -->
+  <circle cx="615" cy="667" r="4" fill="#2a2a2a" stroke="#6a6860" stroke-width="0.5"/>
+  <circle cx="615" cy="667" r="2" fill="#444240"/>
+  <circle cx="638" cy="690" r="3" fill="#2a2a2a" stroke="#6a6860" stroke-width="0.5"/>
+
+  <!-- NECK -->
+  <!-- Human left neck -->
+  <path d="M335 530 Q345 540 360 545 L380 548 L380 590 L340 582 Q300 574 290 560 Z" fill="#8b6440" opacity="0.9"/>
+
+  <!-- Mechanical right neck -->
+  <path d="M420 548 L440 545 Q455 540 465 530 L510 560 Q500 574 460 582 L420 590 Z" fill="#1e1e1e"/>
+  <!-- Neck vertebrae mechanical segments -->
+  <rect x="422" y="542" width="30" height="8" rx="2" fill="#252525" stroke="#555250" stroke-width="0.5"/>
+  <rect x="424" y="554" width="28" height="8" rx="2" fill="#222222" stroke="#504e4a" stroke-width="0.5"/>
+  <rect x="426" y="566" width="26" height="8" rx="2" fill="#1e1e1e" stroke="#4a4846" stroke-width="0.5"/>
+  <line x1="437" y1="542" x2="437" y2="582" stroke="#606060" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- SKULL / HEAD STRUCTURE -->
+  <!-- Human skull left half -->
+  <path d="M195 320 Q200 200 320 155 Q380 135 400 135 L400 590 L380 578 Q300 570 265 530 Q220 475 195 400 Z" fill="url(#skinGrad)" clip-path="url(#leftHalf)"/>
+
+  <!-- Cybernetic skull right half -->
+  <path d="M400 135 Q440 135 500 155 Q600 200 605 320 Q620 400 580 475 Q545 530 500 548 Q460 565 420 578 L400 590 Z" fill="#141414" clip-path="url(#rightHalf)"/>
+
+  <!-- Mechanical skull panels - right side -->
+  <!-- Main skull plate -->
+  <path d="M400 140 Q445 138 495 158 Q570 192 590 300 Q605 380 575 448 Q548 505 505 530 L420 548 L400 555 Z" fill="#1a1a1a" clip-path="url(#rightHalf)"/>
+
+  <!-- Skull panel segments -->
+  <path d="M455 155 Q510 175 550 230" stroke="#606058" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M490 170 Q540 200 565 265 Q580 310 576 360" stroke="#504e48" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <path d="M510 220 Q545 260 552 320 Q556 365 544 410" stroke="#444240" stroke-width="0.6" fill="none" opacity="0.4"/>
+
+  <!-- Panel seam lines on skull -->
+  <line x1="400" y1="140" x2="410" y2="250" stroke="#303028" stroke-width="1.5" opacity="0.6"/>
+  <line x1="410" y1="250" x2="440" y2="300" stroke="#303028" stroke-width="1" opacity="0.4"/>
+  <path d="M530 170 Q555 220 558 290 Q560 350 548 400" stroke="#383830" stroke-width="1.2" fill="none" opacity="0.5"/>
+
+  <!-- Metallic plating highlight -->
+  <path d="M455 155 Q500 160 535 185 Q560 205 572 250" stroke="#a0a090" stroke-width="0.8" fill="none" opacity="0.3"/>
+
+  <!-- FOREHEAD - mechanical right side detail -->
+  <!-- Forehead plate -->
+  <path d="M400 140 Q445 138 490 158 Q535 180 555 220 Q540 215 510 205 Q475 195 445 192 Q420 190 400 188 Z" fill="#222220" stroke="#484840" stroke-width="0.5"/>
+
+  <!-- Brow ridge mechanical detail -->
+  <path d="M405 265 Q430 258 465 260 Q500 262 525 272 Q540 278 548 290" stroke="#585850" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M408 268 Q432 261 467 263 Q502 265 526 275" stroke="#888878" stroke-width="0.5" fill="none" opacity="0.4"/>
+
+  <!-- Temple mechanical structure - right -->
+  <path d="M570 300 Q590 310 598 340 Q604 368 596 395 L578 380 Q582 355 578 330 Z" fill="#202020" stroke="#585850" stroke-width="0.5"/>
+  <!-- Temple bolts/rivets -->
+  <circle cx="580" cy="318" r="3.5" fill="#1a1a1a" stroke="#706860" stroke-width="0.8"/>
+  <circle cx="580" cy="318" r="1.5" fill="#808070" opacity="0.6"/>
+  <circle cx="587" cy="345" r="3" fill="#1a1a1a" stroke="#686858" stroke-width="0.8"/>
+  <circle cx="587" cy="345" r="1.2" fill="#787068"/>
+  <circle cx="585" cy="372" r="3" fill="#1a1a1a" stroke="#686858" stroke-width="0.8"/>
+
+  <!-- CHEEK / JAW - mechanical right side -->
+  <!-- Cheekbone plate -->
+  <path d="M530 358 Q565 360 580 390 Q588 410 582 435 Q570 450 548 455 Q525 458 508 448 Z" fill="#1e1e1e" stroke="#484840" stroke-width="0.5"/>
+  <path d="M532 360 Q565 362 578 392 Q586 411 580 433" stroke="#686858" stroke-width="0.6" fill="none" opacity="0.5"/>
+
+  <!-- Jaw mechanical structure -->
+  <path d="M400 530 Q435 532 465 525 Q500 515 522 498 Q545 478 548 455 Q530 460 505 462 Q465 465 440 460 Q420 457 400 455 Z" fill="#181818"/>
+  <path d="M402 530 Q436 532 466 525 Q500 515 521 498" stroke="#484840" stroke-width="0.5" fill="none" opacity="0.5"/>
+
+  <!-- Jaw segment lines -->
+  <line x1="420" y1="468" x2="418" y2="528" stroke="#383830" stroke-width="0.8" opacity="0.5"/>
+  <line x1="445" y1="464" x2="444" y2="525" stroke="#343428" stroke-width="0.6" opacity="0.4"/>
+  <line x1="470" y1="460" x2="470" y2="520" stroke="#303028" stroke-width="0.6" opacity="0.4"/>
+  <line x1="495" y1="455" x2="498" y2="510" stroke="#2c2c24" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- EYES -->
+  <!-- Left eye (human) - warm, organic -->
+  <ellipse cx="308" cy="335" rx="45" ry="28" fill="#0d0806"/>
+  <!-- Eyelid structure -->
+  <path d="M265 332 Q285 318 308 316 Q330 318 350 332" fill="#8b6440" stroke="none"/>
+  <path d="M265 338 Q285 354 308 356 Q330 354 350 338" fill="#7a5835" stroke="none"/>
+  <!-- Iris -->
+  <circle cx="308" cy="336" r="20" fill="#3d2810"/>
+  <circle cx="308" cy="336" r="17" fill="#4a3218"/>
+  <circle cx="308" cy="336" r="13" fill="#2d1e0c"/>
+  <!-- Pupil -->
+  <circle cx="308" cy="336" r="8" fill="#0a0804"/>
+  <!-- Eye highlight -->
+  <ellipse cx="314" cy="330" rx="4" ry="3" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="303" cy="338" rx="2" ry="1.5" fill="#ffffff" opacity="0.2"/>
+  <!-- Lashes hints -->
+  <path d="M265 332 Q276 325 288 319 Q300 314 315 313" stroke="#2a1808" stroke-width="2" fill="none" opacity="0.7"/>
+
+  <!-- Right eye (cybernetic) - signal red -->
+  <ellipse cx="492" cy="335" rx="45" ry="28" fill="#080404"/>
+  <!-- Mechanical eye housing -->
+  <path d="M448 332 Q468 316 492 314 Q516 316 536 332" fill="#181412" stroke="#484038" stroke-width="0.5"/>
+  <path d="M448 338 Q468 356 492 358 Q516 356 536 338" fill="#141210" stroke="#403830" stroke-width="0.5"/>
+  <!-- Iris ring - mechanical -->
+  <circle cx="492" cy="336" r="22" fill="#0e0808" stroke="#E63936" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="492" cy="336" r="18" fill="#120808" stroke="#c82e2b" stroke-width="0.8" opacity="0.7"/>
+  <!-- Inner tech pattern -->
+  <circle cx="492" cy="336" r="14" fill="#0a0404"/>
+  <line x1="478" y1="336" x2="506" y2="336" stroke="#E63936" stroke-width="0.5" opacity="0.4"/>
+  <line x1="492" y1="322" x2="492" y2="350" stroke="#E63936" stroke-width="0.5" opacity="0.4"/>
+  <line x1="482" y1="326" x2="502" y2="346" stroke="#E63936" stroke-width="0.3" opacity="0.3"/>
+  <line x1="502" y1="326" x2="482" y2="346" stroke="#E63936" stroke-width="0.3" opacity="0.3"/>
+  <!-- Central lens -->
+  <circle cx="492" cy="336" r="8" fill="#1a0808"/>
+  <circle cx="492" cy="336" r="5" fill="#E63936" opacity="0.9" filter="url(#eyeFilter)"/>
+  <circle cx="492" cy="336" r="3" fill="#ff5555" opacity="0.8"/>
+  <!-- Eye glow -->
+  <circle cx="492" cy="336" r="22" fill="url(#eyeGlow)" opacity="0.3"/>
+  <!-- Mechanical brow rail -->
+  <path d="M448 318 L455 310 Q475 302 492 300 Q510 302 530 310 L536 318" stroke="#686050" stroke-width="1" fill="none" opacity="0.6"/>
+
+  <!-- Eye LED strip -->
+  <line x1="536" y1="333" x2="556" y2="330" stroke="#E63936" stroke-width="1" opacity="0.6"/>
+  <line x1="536" y1="336" x2="558" y2="336" stroke="#E63936" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- NOSE -->
+  <!-- Human left nostril -->
+  <path d="M370 420 Q363 428 362 436 Q364 442 372 443 Q382 442 388 435 Q390 428 385 420 Z" fill="#7a5230" opacity="0.8"/>
+  <!-- Nose bridge -->
+  <path d="M385 340 Q388 380 388 400 Q388 415 385 428" stroke="#6b4828" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- Mechanical right nostril -->
+  <path d="M400 428 Q408 435 418 436 Q428 435 432 428 Q430 420 418 418 Q407 418 400 428" fill="#181412" stroke="#484038" stroke-width="0.5"/>
+  <!-- Right nose mechanical vent -->
+  <line x1="405" y1="428" x2="428" y2="428" stroke="#403830" stroke-width="0.8" opacity="0.5"/>
+  <line x1="407" y1="431" x2="426" y2="431" stroke="#383028" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- MOUTH -->
+  <!-- Human left lip -->
+  <path d="M295 480 Q325 468 358 468 Q380 468 400 472" fill="#6b3e28" opacity="0.8"/>
+  <path d="M295 480 Q320 494 350 496 Q375 496 400 490" fill="#5a3220" opacity="0.9"/>
+  <!-- Lip line -->
+  <path d="M295 480 Q325 476 360 476 Q380 476 400 478" stroke="#4a2818" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Mechanical right mouth -->
+  <path d="M400 472 Q420 468 445 468 Q470 470 490 476 Q505 480 505 480 Q490 486 470 490 Q445 494 420 492 Q408 490 400 490" fill="#181412"/>
+  <!-- Mouth mechanical segments -->
+  <line x1="405" y1="478" x2="402" y2="488" stroke="#383028" stroke-width="0.8" opacity="0.5"/>
+  <line x1="420" y1="470" x2="418" y2="492" stroke="#343028" stroke-width="0.6" opacity="0.4"/>
+  <line x1="440" y1="468" x2="438" y2="492" stroke="#2e2820" stroke-width="0.6" opacity="0.4"/>
+  <line x1="460" y1="470" x2="460" y2="490" stroke="#2a2418" stroke-width="0.6" opacity="0.3"/>
+  <line x1="480" y1="474" x2="482" y2="488" stroke="#262018" stroke-width="0.6" opacity="0.3"/>
+  <!-- Chin mechanical detail -->
+  <path d="M400 490 Q440 505 480 505 Q505 503 515 495" stroke="#383028" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+  <!-- SPLIT LINE - the junction between human and machine -->
+  <line x1="400" y1="100" x2="400" y2="600" stroke="url(#splitLine)" stroke-width="1.5"/>
+  <!-- Split line glow -->
+  <line x1="400" y1="150" x2="400" y2="580" stroke="#E63936" stroke-width="4" opacity="0.08" filter="url(#softBlur)"/>
+
+  <!-- Junction detail at split -->
+  <circle cx="400" cy="200" r="2" fill="#E63936" opacity="0.6"/>
+  <circle cx="400" cy="280" r="1.5" fill="#E63936" opacity="0.5"/>
+  <circle cx="400" cy="360" r="2" fill="#E63936" opacity="0.7"/>
+  <circle cx="400" cy="440" r="1.5" fill="#E63936" opacity="0.5"/>
+  <circle cx="400" cy="520" r="2" fill="#E63936" opacity="0.4"/>
+
+  <!-- EAR - left (human) -->
+  <path d="M193 320 Q183 328 180 342 Q178 358 182 372 Q186 386 196 390 Q204 392 210 388 Q200 375 198 358 Q196 342 203 328 Z" fill="#7a5230"/>
+  <path d="M196 332 Q190 345 191 358 Q192 372 198 380" stroke="#6b4228" stroke-width="1" fill="none" opacity="0.4"/>
+
+  <!-- EAR - right (cybernetic) -->
+  <path d="M607 320 Q617 328 620 342 Q622 358 618 372 Q614 386 604 390 Q596 392 592 388 Q594 375 594 358 Q594 342 592 328 Z" fill="#202020" stroke="#484038" stroke-width="0.5"/>
+  <!-- Ear tech details -->
+  <path d="M610 330 Q616 342 616 356 Q616 370 610 380" stroke="#585048" stroke-width="1" fill="none" opacity="0.5"/>
+  <circle cx="608" cy="340" r="3" fill="#181410" stroke="#504840" stroke-width="0.5"/>
+  <circle cx="610" cy="358" r="2.5" fill="#181410" stroke="#484038" stroke-width="0.5"/>
+  <circle cx="608" cy="374" r="3" fill="#181410" stroke="#504840" stroke-width="0.5"/>
+  <!-- Ear antenna stub -->
+  <line x1="614" y1="308" x2="618" y2="285" stroke="#686050" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="618" cy="284" r="2.5" fill="#E63936" opacity="0.5"/>
+  <circle cx="618" cy="284" r="1" fill="#E63936" opacity="0.9"/>
+
+  <!-- HAIR - left side (human) -->
+  <path d="M198 280 Q210 220 250 180 Q300 145 370 136 L400 135 L400 170 Q370 170 335 182 Q290 200 265 230 Q240 258 230 290 Z" fill="#1a0e06"/>
+  <path d="M200 260 Q218 215 258 183 Q298 155 365 143" stroke="#2a1808" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M205 290 Q225 245 265 210 Q305 178 360 162" stroke="#221206" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Hair strands hints -->
+  <path d="M210 265 Q230 240 255 220" stroke="#181006" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M220 278 Q245 252 270 235" stroke="#141008" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+  <!-- SKULL TOP - mechanical right side -->
+  <path d="M400 135 Q445 136 490 155 Q550 180 575 230 Q590 265 595 310 Q560 295 530 280 Q500 265 475 240 Q450 215 430 195 Q415 180 400 170 Z" fill="#181816"/>
+  <!-- Skull plate seams -->
+  <path d="M440 155 Q468 170 492 192 Q514 215 528 245" stroke="#2a2a24" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M478 160 Q510 185 530 215 Q550 248 557 285" stroke="#222220" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+  <!-- Skull vents -->
+  <rect x="460" y="170" width="20" height="4" rx="1" fill="#101010" stroke="#383830" stroke-width="0.3" transform="rotate(-15 470 172)"/>
+  <rect x="468" y="180" width="18" height="3" rx="1" fill="#101010" stroke="#303028" stroke-width="0.3" transform="rotate(-15 477 181)"/>
+  <rect x="474" y="190" width="16" height="3" rx="1" fill="#101010" stroke="#2a2a22" stroke-width="0.3" transform="rotate(-18 482 191)"/>
+
+  <!-- AMBIENT LIGHTING OVERLAYS -->
+  <!-- Left side warm light -->
+  <path d="M195 300 Q220 220 300 180 Q350 158 400 150 L400 580 Q340 568 285 540 Q230 505 205 445 Q185 390 195 300 Z" fill="#8b5020" opacity="0.04"/>
+
+  <!-- Right side cool shadow -->
+  <path d="M605 300 Q595 220 530 180 Q480 158 400 150 L400 580 Q460 568 515 540 Q570 505 595 445 Q615 390 605 300 Z" fill="#000000" opacity="0.3"/>
+
+  <!-- Red eye ambient on right face -->
+  <ellipse cx="510" cy="320" rx="80" ry="60" fill="#E63936" opacity="0.03"/>
+
+  <!-- METALLIC SHINE HIGHLIGHTS on mechanical side -->
+  <path d="M530 165 Q560 190 578 230" stroke="#c0b8a0" stroke-width="1.5" fill="none" opacity="0.15"/>
+  <path d="M555 240 Q580 275 590 320" stroke="#a8a098" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M524 350 Q555 360 572 390" stroke="#909080" stroke-width="0.8" fill="none" opacity="0.12"/>
+
+  <!-- BOTTOM VIGNETTE -->
+  <rect x="0" y="700" width="800" height="300" fill="url(#bgGrad)" opacity="0.7"/>
+  <rect x="0" y="850" width="800" height="150" fill="#080808" opacity="0.9"/>
+
+  <!-- TOP VIGNETTE -->
+  <rect x="0" y="0" width="800" height="80" fill="#080808" opacity="0.5"/>
+
+  <!-- Side vignettes -->
+  <rect x="0" y="0" width="80" height="1000" fill="#080808" opacity="0.4"/>
+  <rect x="720" y="0" width="80" height="1000" fill="#080808" opacity="0.4"/>
+</svg>
