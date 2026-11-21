@@ -10,10 +10,8 @@ export const HeroSection: React.FC = () => {
 
   return (
     <>
-      {/* Target anchor landmarks placed at hero entrance level to keep hero in full view */}
+      {/* Target anchor landmarks */}
       <div id="hero" tabIndex={-1} className="sr-only" aria-hidden="true" />
-      <div id="evolution" tabIndex={-1} className="sr-only" aria-hidden="true" />
-      <div id="augmentation" tabIndex={-1} className="sr-only" aria-hidden="true" />
       <div id="future" tabIndex={-1} className="sr-only" aria-hidden="true" />
       <div id="discover" tabIndex={-1} className="sr-only" aria-hidden="true" />
 

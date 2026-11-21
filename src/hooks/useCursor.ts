@@ -74,19 +74,25 @@ export function useCursor() {
         }
       }
 
-      // Hide central dot in portrait mode so the label is crystal clear
+      // Dynamic styling based on bright cyber-morphed palette
       if (state === 'portrait') {
         dot.style.opacity = '0'
-        ring.style.backgroundColor = 'rgba(230, 57, 54, 0.08)'
-        ring.style.borderColor = 'rgba(230, 57, 54, 0.85)'
+        ring.style.backgroundColor = 'rgba(49, 91, 255, 0.08)'
+        ring.style.borderColor = '#315BFF'
       } else if (state === 'cta') {
-        if (isVisible) dot.style.opacity = '1'
-        ring.style.backgroundColor = 'rgba(230, 57, 54, 0.04)'
-        ring.style.borderColor = 'rgba(230, 57, 54, 0.75)'
+        if (isVisible) {
+          dot.style.opacity = '1'
+          dot.style.backgroundColor = '#FF5A4E'
+        }
+        ring.style.backgroundColor = 'rgba(49, 91, 255, 0.06)'
+        ring.style.borderColor = '#315BFF'
       } else {
-        if (isVisible) dot.style.opacity = '1'
+        if (isVisible) {
+          dot.style.opacity = '1'
+          dot.style.backgroundColor = '#315BFF'
+        }
         ring.style.backgroundColor = 'transparent'
-        ring.style.borderColor = 'rgba(242, 240, 234, 0.3)'
+        ring.style.borderColor = 'rgba(21, 25, 29, 0.35)'
       }
     }
 

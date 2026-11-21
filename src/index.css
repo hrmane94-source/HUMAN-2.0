@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 /* ─────────────────────────────────────────────────────────
-   BASE RESET & TYPOGRAPHY
+   BRIGHT CYBER-MORPHED DESIGN SYSTEM
+   Porcelain White: #F4F5F2
+   Graphite:        #15191D
+   Electric Cobalt: #315BFF
+   Cyan Telemetry:  #36CFC9
+   Signal Coral:    #FF5A4E
+   Acid Lime:       #22C55E
 ───────────────────────────────────────────────────────── */
 @layer base {
   *,
@@ -13,13 +19,13 @@
   html {
     /* Native scroll-behavior suppressed — Lenis handles smooth scroll */
     scroll-behavior: auto;
-    background-color: #080808;
+    background-color: #F4F5F2;
   }
 
   body {
     margin: 0;
-    background-color: #080808;
-    color: #F2F0EA;
+    background-color: #F4F5F2;
+    color: #15191D;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-synthesis: none;
@@ -45,9 +51,9 @@
     }
   }
 
-  /* Keyboard focus ring — high-contrast Signal-Red indicator */
+  /* Keyboard focus ring — high-contrast Electric Cobalt indicator */
   :focus-visible {
-    outline: 2px solid rgba(230, 57, 54, 0.75);
+    outline: 2px solid #315BFF;
     outline-offset: 3px;
   }
 
@@ -62,6 +68,40 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* ─────────────────────────────────────────────────────────
+   ARCHITECTURAL RESEARCH ENVIRONMENT UTILITIES
+───────────────────────────────────────────────────────── */
+.bg-porcelain-grid {
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(21, 25, 29, 0.06) 1px, transparent 1px),
+    linear-gradient(to right, rgba(21, 25, 29, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(21, 25, 29, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px, 96px 96px, 96px 96px;
+}
+
+.bg-glass-card {
+  background-color: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(21, 25, 29, 0.08);
+}
+
+.text-graphite {
+  color: #15191D;
+}
+
+.text-cobalt {
+  color: #315BFF;
+}
+
+.text-coral {
+  color: #FF5A4E;
+}
+
+.text-cyan-hud {
+  color: #36CFC9;
 }
 
 /* ─────────────────────────────────────────────────────────
