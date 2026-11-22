@@ -1,0 +1,54 @@
+/**
+ * HUMAN 2.0 — DESIGN TOKENS
+ * Foundation Phase 1: Cinematic, Editorial, and Technically Sophisticated
+ */
+
+:root {
+  /* Surface & Background Palette */
+  --color-bg-deep: #07090C;
+  --color-bg-base: #0B0E13;
+  --color-bg-surface: #10151C;
+  --color-bg-surface-elevated: #161D26;
+  --color-bg-glass: rgba(11, 14, 19, 0.75);
+
+  /* Border & Divider Lines */
+  --color-border-subtle: rgba(241, 245, 249, 0.08);
+  --color-border-base: rgba(241, 245, 249, 0.14);
+  --color-border-accent: rgba(49, 91, 255, 0.4);
+
+  /* Typography Colors */
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  --color-text-dim: #334155;
+
+  /* Speculative Accents */
+  --color-accent-cobalt: #315BFF;
+  --color-accent-cobalt-hover: #2045E0;
+  --color-accent-cyan: #36CFC9;
+  --color-accent-coral: #FF5A4E;
+  --color-accent-emerald: #10B981;
+
+  /* Typography Stacks */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, 'Courier New', monospace;
+
+  /* Layout Boundaries */
+  --max-width-content: 1440px;
+  --max-width-editorial: 960px;
+  --header-height: 56px;
+
+  /* Z-Index Hierarchy */
+  --z-canvas: 1;
+  --z-stage-ui: 10;
+  --z-navigation: 50;
+  --z-loader: 100;
+  --z-modal: 200;
+
+  /* Interaction Timing */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snappy: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 800ms;
+}
